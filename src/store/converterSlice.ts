@@ -50,12 +50,12 @@ const converterSlice = createSlice({
         })
       })
       .addCase(convertFile.fulfilled, (state, action) => {
-        const job = state.jobs.find((j) => j.fileName === action.payload.fileName)
+        const job = state.jobs.find((j) => j.id === action.meta.requestId)
         if (job) { job.status = 'done'; job.downloadUrl = action.payload.downloadUrl }
       })
       .addCase(convertFile.rejected, (state, action) => {
-        const last = state.jobs[state.jobs.length - 1]
-        if (last) { last.status = 'error'; last.errorMsg = action.error.message }
+        const job = state.jobs.find((j) => j.id === action.meta.requestId)
+        if (job) { job.status = 'error'; job.errorMsg = action.error.message }
       })
   }
 })
