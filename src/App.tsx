@@ -1,13 +1,13 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import ConverterPage from './components/ConverterPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<ConverterPage />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
