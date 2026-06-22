@@ -1,0 +1,25 @@
+// Design tokens
+$color-primary: #2563eb;
+$color-bg: #f8fafc;
+$color-surface: #ffffff;
+$color-text: #1e293b;
+$color-muted: #64748b;
+$color-success: #16a34a;
+$color-error: #dc2626;
+$color-warning: #d97706;
+$color-border: #e2e8f0;
+
+$radius: 10px;
+$shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+a { color: $color-primary; }
+button { cursor: pointer; font: inherit; }

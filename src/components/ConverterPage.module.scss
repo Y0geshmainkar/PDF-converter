@@ -1,0 +1,58 @@
+@use '../styles/global' as *;
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  background: $color-primary;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  h1 { font-size: 1.75rem; font-weight: 700; }
+  p { font-size: 0.9rem; opacity: 0.85; }
+}
+
+.main {
+  flex: 1;
+  max-width: 760px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modeNav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modeTab {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid $color-border;
+  border-radius: $radius;
+  background: $color-surface;
+  color: $color-muted;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+  &:hover { border-color: $color-primary; color: $color-primary; }
+  &:focus-visible { outline: 3px solid $color-primary; outline-offset: 2px; }
+  &.active {
+    background: $color-primary;
+    border-color: $color-primary;
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.clearBtn {
+  align-self: flex-start;
+  padding: 0.4rem 1rem;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: $color-surface;
+  color: $color-muted;
+  font-size: 0.85rem;
+  &:hover { background: #fee2e2; border-color: #dc2626; color: #dc2626; }
+  &:focus-visible { outline: 3px solid $color-primary; outline-offset: 2px; }
+}

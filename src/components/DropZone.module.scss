@@ -1,0 +1,23 @@
+@use '../styles/global' as *;
+
+.zone {
+  border: 2px dashed $color-border;
+  border-radius: $radius;
+  background: $color-surface;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  &:hover, &:focus-visible { border-color: $color-primary; background: #eff6ff; }
+  &:focus-visible { outline: 3px solid $color-primary; outline-offset: 2px; }
+  &.dragging { border-color: $color-primary; background: #dbeafe; }
+}
+
+.icon { font-size: 2.5rem; }
+
+p { color: $color-text; }
+small { color: $color-muted; font-size: 0.8rem; }
